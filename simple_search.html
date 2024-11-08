@@ -1,13 +1,109 @@
 <!DOCTYPE html>
-<html lang="'en-US">
+<html lang="en-US">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simple Search Page</title>
+        <style>
+            html {
+                font-family: sans-serif;
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                border: 1px black solid;
+            }
+            #container {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 100%;
+                border: 1px black solid; 
+            }
+            .flex-item {
+                flex: 1;
+                text-align: center;
+                overflow: hidden;
+            }
+            .flex-item-70 {
+                flex-basis: 80%;;
+            }
+            .flex-item-30 {
+                flex-basis: 20%;
+            }
+            .flex-container-2 {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+            }
+            .flex-container-2-item {
+                border: none;
+                background-color: aliceblue;
+                color: blueviolet;
+                margin: 10px;
+                width: 100%;
+            }
+            .flex-container-2-item:hover {
+                background-color: whitesmoke;
+                color: palevioletred;
+            }
+            #input, #input-submit, #img {
+                
+                border: none;
+                border-radius: 50px;
+                color: white;
+                font-family: inherit;
+                padding:10px 10px;
+                margin: 10px 0px;
+            }
+            #img {
+                max-height: 150px;
+                width: 300px;
+                border-radius: 0;
+                margin-top:200px;;
+            }
+            #input {
+                box-shadow: 1px 1px 10px 10px whitesmoke;
+                width: 500px;
+                max-width: 90%;
+            }
+            #input-submit {
+                border: 2px none solid;
+                border-radius: 2px;
+                color: green;
+                
+            }
+            #input-submit:hover {
+                background-color: whitesmoke;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                flex-wrap: wrap;
+                height: 100vh;
+                align-items: center;
+            }
+            .form-background {
+                background-color: lightgray;;
+            }
+        </style>
     </head>
     <body>
-        <h1>This is Simple Google Search</h1>
-        <form action="'https://www.google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
+        <div id="container">
+            <div class="form-background flex-item flex-item-70">
+                <form action="https://www.google.com/search">
+                    <img id="img" src="https://live.staticflickr.com/3114/2856173673_98ab05e317_b.jpg" alt="Google Image">
+                    <input id="input" type="text" name="q" placeholder="Search Google or Type URL">
+                    <input id="input-submit" type="submit" value="Google Search">
+                </form>
+            </div>
+            <div class="flex-item flex-item-30 flex-container-2">
+                <a href="#" class="flex-container-2-item">Image Search -></a>
+                <a href="#" class="flex-container-2-item">Advanced Search -></a>
+            </div>
+        </div>
+                   
     </body>
 </html>
