@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Search</title>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <div id="flex-container-1">
+            <div class="flex-item flex-item-5 flex-container-2">
+                <a href="simple_search.html" class="flex-container-2-item">Simple Search</a>
+            </div>
+            <div class="flex-item flex-item-95">
+                <form action="https://www.google.com/search" method="GET">
+                    <img id="img" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+                    <input id="input" type="text" name="q" placeholder="Search Google Images">
+                    <input type="hidden" name="tbm" value="isch">
+                    <input id="input-submit" type="submit" value="Google Image Search">
+                </form>
+            </div>  
+        </div>
+    </body>
+</html>
