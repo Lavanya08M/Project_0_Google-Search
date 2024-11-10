@@ -55,6 +55,7 @@ body {
     box-shadow: 1px 1px 10px 10px whitesmoke;
     width: 500px;
     max-width: 90%;
+    color: black;
 }
 #input-submit {
     border: 2px none solid;
