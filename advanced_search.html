@@ -29,7 +29,7 @@
                 box-sizing: border-box;
                 height: 30px;
                 font-size: 13px;
-                margin: 10px;
+                margin: 8px;
                 align-content: center;
                 text-align: start;
             }
@@ -54,7 +54,16 @@
             .extra-content {
                 font-size: 11px;
             }
-            
+            .search-btn {
+                float:right;
+                background-color: #4d90fe;
+                border: 1px solid #3079ed;
+                color: white;
+            }
+            .search-btn:hover {
+                background-color: #4787ed;
+                border: 1px solid #3079ed;
+            }
             form {
                 display: flex;
                 flex-direction: column;
@@ -120,10 +129,70 @@
                     </div>
                     <div class="form-grp-1">
                         <div class="form-group">
-                            <div class="row1" style="margin-top: 20px;;">
-                                <div class="item item-15">Find pages with...</div>
-                                <div class="item item-50">&nbsp;</div>
-                                <div class="item item-35">To do this in the search box</div>
+                            <div class="row1" style="margin-top: 20px;">
+                                <div class="item item-15">Then narrow your results by...</div>
+                                <div class="item item-50 space-item">&nbsp;</div>
+                                <div class="item item-35 space-item">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row1">
+                                <label class="item item-15" for="lang">Language</label>
+                                <select id="lang" class="item item-50" name="lr">
+                                    <option value="">Any language</option>
+                                    <option value="lang_en">English</option>
+                                    <option value="lang_es">Spanish</option>
+                                    <option value="lang_fr">French</option>
+                                </select>
+                                <label class="item item-35 extra-content" for="lang">Find pages in the language you select.</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row1">
+                                <label class="item item-15" for="region">Region</label>
+                                <select id="region" class="item item-50" name="cr">
+                                    <option value="">Any Region</option>
+                                    <option value="countryUS">United States</option>
+                                    <option value="countryCA">Canada</option>
+                                    <option value="countryGB">United Kingdom</option>
+                                    <option value="countryAU">Australia</option>
+                                </select>
+                                <label class="item item-35 extra-content" for="region">Find pages published in a particular region.</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row1">
+                                <label class="item item-15" for="daterange">Last Updated</label>
+                                <select id="daterange" class="item item-50" name="as_qdr">
+                                    <option value="">Any time</option>
+                                    <option value="d">Past 24 hours</option>
+                                    <option value="w">Past week</option>
+                                    <option value="m">Past month</option>
+                                    <option value="y">Past year</option>
+                                </select>
+                                <label class="item item-35 extra-content" for="daterange">Find pages updated within the time you specify.</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row1">
+                                <label class="item item-15" for="filetype">File Type</label>
+                                <select id="filetype" class="item item-50" name="as_filetype">
+                                    <option value="">Any format</option>
+                                    <option value="pdf">PDF</option>
+                                    <option value="doc">Microsoft Word</option>
+                                    <option value="ppt">PowerPoint</option>
+                                    <option value="yxls">Excel Spreadsheet</option>
+                                </select>
+                                <label class="item item-35 extra-content" for="filetype">Find pages in the format you prefer.</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row1">
+                                <div class="item item-15 head1">&nbsp;</div>
+                                <div class="item item-50 space-item">
+                                    <input type="submit" class="search-btn" value="Advanced Search">
+                                </div>
+                                <div class="item item-35">&nbsp;</div>
                             </div>
                         </div>
                     </div>
